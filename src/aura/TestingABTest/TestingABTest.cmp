@@ -1,0 +1,15 @@
+<!--
+ - @author Scott Covert
+ - @date 10/14/16
+ - @description Enter description here
+ -->
+
+<aura:component extends="c:ABTest" implements="flexipage:availableForAllPageTypes" description="TestingABTest">
+    <aura:handler event="c:ABTestRun" action="{!c.handleABTestRun}"/>
+    <aura:attribute name="test" type="String"/>
+    <aura:attribute name="Experiment" type="String[]" default="['test']"/>
+    <aura:attribute name="Alternatives" type="Object" default="{'test':['red','blue']}"/>
+    <!--<aura:attribute name="ForcedResult" type="Object" default="{'test':'blue'}"/>-->
+    <aura:registerEvent name="ABTest" type="c.ABTestRun"/>
+    <div> The color of the day is: {!v.test}</div>
+</aura:component>

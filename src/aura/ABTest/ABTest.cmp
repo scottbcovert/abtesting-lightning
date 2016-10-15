@@ -1,0 +1,11 @@
+<!--
+ - @author Scott Covert
+ - @date 10/13/16
+ - @description A/B Test Lightning Component
+ -->
+
+<aura:component access="global" extensible="true" abstract="true" implements="c:ABTestInterface" controller="ABTestController" description="A/B Test Component">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:ABTestConversion" action="{!c.handleABTestConversion}"/>
+    {!v.body}
+</aura:component>

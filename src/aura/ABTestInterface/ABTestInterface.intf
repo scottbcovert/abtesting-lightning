@@ -1,0 +1,14 @@
+<!--
+ - @author Scott Covert
+ - @date 10/13/16
+ - @description A/B Test Lightning Interface
+ -->
+
+<aura:interface access="global" description="A/B Test Interface">
+    <aura:attribute access="global" name="Experiment" type="String[]" required="true" description="Array of A/B experiment names to run"/>
+    <aura:attribute access="global" name="Alternatives" type="Object" description="Mapping of each specified A/B experiment to an array of possible alternatives"/>
+    <aura:attribute access="global" name="ForcedResult" type="Object" description="Forces a specified result to be returned from the corresponding array of possible alternatives for each mapped specified A/B experiment-recommended for testing only as participation will not be recorded"/>
+    <aura:attribute access="global" name="TrafficFraction" type="Decimal[]" description="Array of traffic percentages each specified A/B experiment should be exposed to, all other visitors will receive the experiments' corresponding control value"/>
+    <aura:attribute access="global" name="ClientId" type="String" description="Unique id for the client participating in each specified A/B experiment, set automatically but can be set manually to override for testing"/>
+    <aura:registerEvent name="ABTest" type="c.ABTestRun"/>
+</aura:interface>

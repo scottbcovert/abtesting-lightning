@@ -1,0 +1,9 @@
+<!--
+ - @author Scott Covert
+ - @date 10/13/16
+ - @description A/B Test Lightning Application Event
+ -->
+
+<aura:event access="global" type="APPLICATION" description="A/B Test Run Application Event">
+    <aura:attribute access="global" name="Results" type="Object[]" description="Array of results for each specified A/B experiment"/>
+</aura:event>

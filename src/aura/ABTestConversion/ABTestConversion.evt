@@ -1,0 +1,10 @@
+<!--
+ - @author Scott Covert
+ - @date 10/13/16
+ - @description A/B Test Conversion Lightning Application Event
+ -->
+
+<aura:event access="global" type="APPLICATION" description="A/B Test Conversion Application Event">
+    <aura:attribute access="global" name="Experiment" type="String[]" required="true" description="Array of A/B experiments to mark as converted"/>
+    <aura:attribute access="global" name="ClientId" type="String" description="Unique id for the client participating in each specified A/B experiment"/>
+</aura:event>
